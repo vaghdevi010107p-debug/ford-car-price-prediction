@@ -1,21 +1,30 @@
 # 🚗 Ford Car Price Prediction
 
-A Machine Learning project that predicts the prices of Ford cars based on different vehicle features.
+A Machine Learning project that predicts Ford car prices based on different vehicle features using regression techniques.
 
 ## 📌 Project Overview
 
-The goal of this project is to build a machine learning model that can predict the price of a Ford car using features such as model, year, mileage, engine size, transmission, fuel type, and other available attributes.
+The goal of this project is to build a machine learning model that can predict the price of a Ford car using features such as model, year, mileage, engine size, transmission, fuel type, tax, and MPG.
 
-This project covers the complete machine learning workflow, from data exploration and preprocessing to model training and evaluation.
+This project follows the complete Machine Learning workflow:
+
+- Data loading
+- Data cleaning
+- Exploratory Data Analysis (EDA)
+- Data visualization
+- Feature preprocessing
+- Model building
+- Model evaluation
+- Price prediction
 
 ## 🎯 Objectives
 
 - Analyze the Ford car dataset
-- Understand the factors affecting car prices
+- Understand factors affecting car prices
 - Perform data cleaning and preprocessing
-- Conduct Exploratory Data Analysis (EDA)
+- Conduct Exploratory Data Analysis
 - Visualize important patterns and relationships
-- Build Machine Learning regression models
+- Build regression models
 - Evaluate model performance
 - Predict Ford car prices
 
@@ -23,7 +32,7 @@ This project covers the complete machine learning workflow, from data exploratio
 
 The dataset contains information about Ford cars and their characteristics.
 
-### Example Features
+### Features
 
 - Model
 - Year
@@ -45,50 +54,71 @@ The dataset contains information about Ford cars and their characteristics.
 - Matplotlib
 - Seaborn
 - Scikit-learn
-- Jupyter Notebook / Kaggle Notebook
+- Jupyter Notebook
+- Kaggle Notebook
 
 ## 🔍 Project Workflow
 
 ### 1. Data Collection
-Imported the Ford car dataset and examined its structure.
+
+Imported the Ford car dataset and examined its structure, columns, and data types.
 
 ### 2. Data Cleaning
+
 - Checked for missing values
 - Checked duplicate records
 - Examined data types
-- Handled categorical and numerical features
-- Prepared the data for machine learning
+- Processed numerical features
+- Processed categorical features
+- Prepared the dataset for machine learning
 
 ### 3. Exploratory Data Analysis
 
-Performed EDA to understand:
+Analyzed:
 
 - Price distribution
 - Relationship between mileage and price
-- Relationship between car year and price
+- Relationship between year and price
 - Effect of engine size on price
 - Price differences across car models
-- Impact of fuel type and transmission
+- Impact of fuel type
+- Impact of transmission type
 
-### 4. Feature Engineering
+### 4. Data Visualization
 
-Prepared relevant numerical and categorical features for machine learning.
+Created visualizations to understand relationships between important features.
+
+#### Price Distribution
+
+![Price Distribution](images/price-distribution.png)
+
+#### Correlation Heatmap
+
+![Correlation Heatmap](images/correlation-heatmap.png)
+
+#### Transmission vs Price
+
+![Transmission vs Price](images/transmission-price-boxplot.png)
+
+### 5. Feature Engineering
+
+Prepared numerical and categorical features for machine learning.
 
 Categorical variables were converted into numerical representations where required.
 
-### 5. Model Building
+### 6. Model Building
 
-Regression algorithms were used to predict car prices.
+Regression algorithms were used to predict Ford car prices.
 
-Models explored may include:
+Models explored include:
 
 - Linear Regression
 - Decision Tree Regressor
 - Random Forest Regressor
 
-### 6. Model Evaluation
+### 7. Model Evaluation
 
-The models were evaluated using regression metrics such as:
+The models were evaluated using:
 
 - Mean Absolute Error (MAE)
 - Mean Squared Error (MSE)
@@ -97,17 +127,15 @@ The models were evaluated using regression metrics such as:
 
 ## 📈 Results
 
-The trained machine learning models were compared based on their prediction performance.
+The trained models were compared based on their prediction performance.
 
-The best-performing model can be identified based on the evaluation metrics calculated in the notebook.
-
-> See the Jupyter Notebook for the complete analysis, visualizations, model training, and evaluation results.
+The detailed model training, evaluation metrics, and predictions are available in the Jupyter Notebook.
 
 ## 💡 Key Insights
 
-The analysis helps understand how different vehicle characteristics influence Ford car prices.
+The analysis investigates how different vehicle characteristics are related to Ford car prices.
 
-Important factors investigated include:
+Important factors analyzed include:
 
 - Vehicle age
 - Mileage
@@ -115,18 +143,20 @@ Important factors investigated include:
 - Car model
 - Fuel type
 - Transmission
+- MPG
+- Tax
 
 ## 📁 Project Structure
 
 ```text
 ford-car-price-prediction/
 │
-├── ford-car-price-prediction.ipynb
-└── README.md
-```
-
-```text
-ford-car-price-prediction/
+├── images/
+│   ├── correlation-heatmap.png
+│   ├── price-distribution.png
+│   └── transmission-price-boxplot.png
 │
 ├── ford-car-price-prediction.ipynb
-└── README.md
+├── README.md
+├── requirements.txt
+└── .gitignore
